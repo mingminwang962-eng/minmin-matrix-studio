@@ -7,3 +7,5 @@
 图库只含敏敏委托 imagegen 生成的 224 张底图。按场景和关键词筛选，“随机一张”只从当前筛选结果中选择，尽量避免重复当前背景。每页 12 张，可直接跳页；下一页缩略图提前缓存。选图先完成解码再切换，避免出现空白画布。
 
 代码及原作者声明见 ../LICENSE，图片使用与出处见 ../ASSET-LICENSE.md，第三方依赖见 ../THIRD_PARTY_NOTICES.md。发布地址 https://tools.minmin11538.cn/matrix/ ，源码 https://github.com/mingminwang962-eng/minmin-matrix-studio 。
+
+页面来源署名和许可范围见 [attribution.md](attribution.md)；用户自己的姓名、头像、账号可替换，PNG 不加品牌水印。品牌官网待上线，暂用项目介绍页。

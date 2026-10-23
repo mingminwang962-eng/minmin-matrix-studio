@@ -1,0 +1,13 @@
+# 使用与来源
+
+分享版默认作者为“你的名字”，账号留空，中性头像。产品名称保留敏敏矩阵工作台。作者资料在页面设置，成品保存到用户指定目录；不要把用户私人文案写回共享技能目录。
+
+完整包已构建好，只需要 Node 22.13+。内置图库与本地上传不需要模型 API key；首次下载需要联网，网络图片会访问相应来源。当前不自动保存编辑内容，不提供自动发帖或文案采集。
+
+图库只含敏敏委托 imagegen 生成的 224 张底图。按场景和关键词筛选，“随机一张”只从当前筛选结果中选择，尽量避免重复当前背景。每页 12 张，可直接跳页；下一页缩略图提前缓存。选图先完成解码再切换，避免出现空白画布。
+
+代码及原作者声明见 ../LICENSE，图片使用与出处见 ../ASSET-LICENSE.md，第三方依赖见 ../THIRD_PARTY_NOTICES.md。发布地址 https://tools.minmin11538.cn/matrix/ ，源码 https://github.com/mingminwang962-eng/minmin-matrix-studio 。
+
+页面来源署名和许可范围见 [attribution.md](attribution.md)；用户自己的姓名、头像、账号可替换，PNG 不加品牌水印。品牌官网待上线，暂用项目介绍页。
+
+来源署名要求和版权范围见 [COPYRIGHT.md](COPYRIGHT.md) 与 [BRAND-LICENSE.md](BRAND-LICENSE.md)。用户生成 PNG 不加品牌水印。品牌官网待上线，暂用项目介绍页。

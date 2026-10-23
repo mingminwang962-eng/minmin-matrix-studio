@@ -11,6 +11,8 @@
 6. 使用用户自己的名字、头像与文案。首次至少验证页面打开、背景加载、随机选图和实际 PNG 导出，并检查像素尺寸。没有浏览器控制能力时打开页面让用户操作，不谎称自动完成。
 7. 成品和私有资料保存到用户自己的工作目录。当前页面不自动保存草稿，刷新前及时导出。更新前备份旧安装与用户配置，不能覆盖其他技能。
 
-支持与限制：已在 macOS 验收；Windows/Linux 尚未实机测试。互动数字是模拟值。图片许可及来源见包内 ASSET-LICENSE.md；代码保留 MIT LICENSE 与原作者声明。
+支持与限制：已在 macOS 验收；Windows/Linux 尚未实机测试。互动数字是模拟值。图片许可及来源见包内 ASSET-LICENSE.md；原有代码保留 MIT LICENSE 与原作者声明；新增署名内容与成品无水印规则见 COPYRIGHT.md 和 BRAND-LICENSE.md。
 
-GitHub 下载方式：优先使用仓库 Releases 的完整包，或从本安装页取得相同版本。只下载 GitHub 源码时，按 README 构建后再启动。
+GitHub 下载方式：使用仓库 downloads/minmin-matrix-studio-1.2.1.zip 的完整包，或从本安装页取得相同版本；按 release.json 校验。只下载 GitHub 源码时，按 README 构建后再启动。
+
+来源：敏敏制作 · https://tools.minmin11538.cn/matrix/ 。修改或分发前读取 [版权范围](COPYRIGHT.md) 和 [来源署名许可](BRAND-LICENSE.md)。用户生成图片不加水印；品牌官网待上线，暂用项目介绍页。

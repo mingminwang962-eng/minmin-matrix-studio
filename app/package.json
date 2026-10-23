@@ -1,9 +1,9 @@
 {
   "name": "minmin-matrix-studio",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "private": true,
   "type": "module",
-  "license": "MIT",
+  "license": "SEE LICENSE IN public/COPYRIGHT.md",
   "engines": {
     "node": ">=22.13.0"
   },
