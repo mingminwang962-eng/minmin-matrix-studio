@@ -27,7 +27,7 @@ node scripts/start.mjs
 
 - X、微博、朋友圈卡片，背景竖图或纯卡片 PNG 导出。
 - 编辑名称、头像、账号和日期；左侧连续编辑，右侧实时预览。
-- 180 张敏敏委托生成的背景，按场景筛选、搜索、随机选图。
+- 200 张敏敏委托生成的背景，按场景筛选、搜索、随机选图。
 - 每页 12 张缩略图，提前加载下一页；点选只读取对应的高质量 WebP。
 - 上传自己的图片，调整卡片位置、大小、背景亮度、字号和透明度。
 
@@ -54,4 +54,4 @@ node scripts/start.mjs
 
 代码基于 [dontbesilent Tweet Card Studio](https://github.com/line-cell/dontbesilent-tweet-card-studio) 改编，保留 line-cell 原始 MIT 版权声明。敏敏版调整连续编辑布局、多平台卡片、图库与默认视觉，移除了文案库及固定改写模板。
 
-本版不带上游原有图库，仅带敏敏委托 imagegen 生成并逐张对应核验的 180 张底图。图片使用说明见 [ASSET-LICENSE.md](ASSET-LICENSE.md)，来源与原始/发行版哈希见 [图片来源清单](app/public/gallery-provenance.json)。生成图不表示真实地点实拍或第三方品牌授权。代码遵循 [MIT LICENSE](LICENSE)，打包依赖声明见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
+本版不带上游原有图库，仅带敏敏委托 imagegen 生成并逐张对应核验的 200 张底图。图片使用说明见 [ASSET-LICENSE.md](ASSET-LICENSE.md)，来源与原始/发行版哈希见 [图片来源清单](app/public/gallery-provenance.json)。生成图不表示真实地点实拍或第三方品牌授权。代码遵循 [MIT LICENSE](LICENSE)，打包依赖声明见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。

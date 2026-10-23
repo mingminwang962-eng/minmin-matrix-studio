@@ -1,12 +1,12 @@
 {
   "name": "minmin-matrix-studio",
-  "version": "1.0.0",
-  "package_url": "https://tools.minmin11538.cn/matrix/downloads/minmin-matrix-studio-1.0.0.zip",
-  "github_release": "https://github.com/mingminwang962-eng/minmin-matrix-studio/releases/tag/v1.0.0",
-  "bytes": 74363765,
-  "sha256": "ccb45e776382b014c1400f541dd0c5ad7dbb97f33d01359edd7e550c111a22ee",
+  "version": "1.1.0",
+  "package_url": "https://tools.minmin11538.cn/matrix/downloads/minmin-matrix-studio-1.1.0.zip",
+  "github_release": "https://github.com/mingminwang962-eng/minmin-matrix-studio/releases/tag/v1.1.0",
+  "bytes": 82814959,
+  "sha256": "ec022daf825ea195ae718b8b5780a2acd70daac5eae669027eddc3bc18b35d12",
   "minimum_node": "22.13.0",
-  "backgrounds": 180,
+  "backgrounds": 200,
   "verified_platforms": [
     "macOS"
   ],
