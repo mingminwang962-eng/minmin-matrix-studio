@@ -7,9 +7,9 @@ import { resolve } from 'node:path';
 test('发行图库全部对应敏敏生成来源，底图和缩略图完整且不含上游图库', () => {
   const entries = JSON.parse(readFileSync('src/generated-backgrounds.json', 'utf8'));
   const provenance = JSON.parse(readFileSync('public/gallery-provenance.json', 'utf8'));
-  assert.equal(entries.length, 200);
-  assert.equal(new Set(entries.map(x => x.id)).size, 200);
-  assert.equal(provenance.assets.length, 200);
+  assert.equal(entries.length, 224);
+  assert.equal(new Set(entries.map(x => x.id)).size, 224);
+  assert.equal(provenance.assets.length, 224);
   assert.equal(existsSync('public/backgrounds'), false);
   assert.equal(existsSync('src/builtin-backgrounds.json'), false);
   for (const item of entries) {
