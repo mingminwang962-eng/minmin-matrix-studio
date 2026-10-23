@@ -1,6 +1,6 @@
 # 敏敏矩阵工作台
 
-当前版本：v1.2.1 · [GitHub 完整包](downloads/minmin-matrix-studio-1.2.1.zip?raw=true) · [下载校验](website/release.json)
+当前版本：v1.2.2 · [GitHub 完整包](downloads/minmin-matrix-studio-1.2.2.zip?raw=true) · [下载校验](website/release.json)
 
 把自己的文字、头像与背景，做成想分享的图文卡片。
 
@@ -56,10 +56,4 @@ node scripts/start.mjs
 
 代码基于 [dontbesilent Tweet Card Studio](https://github.com/line-cell/dontbesilent-tweet-card-studio) 改编，保留 line-cell 原始 MIT 版权声明。敏敏版调整连续编辑布局、多平台卡片、图库与默认视觉，移除了文案库及固定改写模板。
 
-本版不带上游原有图库，仅带敏敏委托 imagegen 生成并逐张对应核验的 224 张底图。图片使用说明见 [ASSET-LICENSE.md](ASSET-LICENSE.md)，来源与原始/发行版哈希见 [图片来源清单](app/public/gallery-provenance.json)。生成图不表示真实地点实拍或第三方品牌授权。原有代码继续遵循 [MIT LICENSE](LICENSE)；本版新增署名内容的适用范围见 [COPYRIGHT.md](COPYRIGHT.md)，打包依赖声明见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
-
-## 来源署名与许可范围
-
-本次新增的原创署名内容采用 [敏敏工具来源署名许可](BRAND-LICENSE.md)，详见 [版权范围](COPYRIGHT.md)。保留适用的项目来源署名和链接；第三方与旧版 MIT 权利不变。用户生成图片、笔记和飞书文档不加水印。
-
-品牌官网尚待建设，暂用本项目已上线的介绍页；[官网待补记录](FOLLOW_UP.md)。
+本版不带上游原有图库，仅带敏敏委托 imagegen 生成并逐张对应核验的 224 张底图。图片使用说明见 [ASSET-LICENSE.md](ASSET-LICENSE.md)，来源与原始/发行版哈希见 [图片来源清单](app/public/gallery-provenance.json)。生成图不表示真实地点实拍或第三方品牌授权。代码遵循 [MIT LICENSE](LICENSE)，打包依赖声明见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。

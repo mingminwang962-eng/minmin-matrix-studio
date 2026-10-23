@@ -1,1 +1,2 @@
 cee186f23c0ef9f34e845616fc805ae6e24190e43c982b8f3c48b0cadf42fae8  minmin-matrix-studio-1.2.1.zip
+4efa948b2fb8570c95fbc1504733fcd0dcf8377fdb30355ac80c8f85a293cf89  minmin-matrix-studio-1.2.2.zip

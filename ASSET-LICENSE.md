@@ -8,4 +8,4 @@
 
 条款来源：https://openai.com/policies/terms-of-use/
 
-原有应用代码继续遵循仓库 MIT LICENSE，并保留 line-cell 原始版权声明；本版新增来源署名组件及说明的适用范围见 COPYRIGHT.md 和 BRAND-LICENSE.md。本次不改变上述图片使用许可。
+应用代码另遵循仓库 MIT LICENSE，并保留 line-cell 原始版权声明。

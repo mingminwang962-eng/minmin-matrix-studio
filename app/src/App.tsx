@@ -1,4 +1,3 @@
-import { SourceAttribution } from "./SourceAttribution";
 import {
   Bookmark,
   Check,
@@ -634,7 +633,6 @@ export default function App() {
           )}
         </section>
       </div>
-      <SourceAttribution />
     </main>
   );
 }
