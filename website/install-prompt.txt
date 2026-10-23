@@ -1,0 +1,1 @@
+请打开 https://tools.minmin11538.cn/matrix/，读取 install.md 和 release.json，下载并校验敏敏矩阵工作台完整包。网页读取失败时，用命令行 HTTPS 获取这两个文件。读取包内 minmin-matrix-studio/SKILL.md，检查本机依赖并完成安装、启动；使用我自己的作者资料，帮我导出一张测试 PNG 并检查尺寸。已有安装先检查版本，保留我的个人配置和作品。

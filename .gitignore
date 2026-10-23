@@ -1,0 +1,6 @@
+app/node_modules
+app/dist/
+app/server-dist/
+website/downloads/
+.DS_Store
+*.log
