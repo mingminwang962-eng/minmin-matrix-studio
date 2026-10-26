@@ -57,3 +57,13 @@ node scripts/start.mjs
 代码基于 [dontbesilent Tweet Card Studio](https://github.com/line-cell/dontbesilent-tweet-card-studio) 改编，保留 line-cell 原始 MIT 版权声明。敏敏版调整连续编辑布局、多平台卡片、图库与默认视觉，移除了文案库及固定改写模板。
 
 本版不带上游原有图库，仅带敏敏委托 imagegen 生成并逐张对应核验的 224 张底图。图片使用说明见 [ASSET-LICENSE.md](ASSET-LICENSE.md)，来源与原始/发行版哈希见 [图片来源清单](app/public/gallery-provenance.json)。生成图不表示真实地点实拍或第三方品牌授权。代码遵循 [MIT LICENSE](LICENSE)，打包依赖声明见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
+
+<!-- minmin-contact:start -->
+## 联系敏敏
+
+使用中有问题，或想交流新想法？欢迎联系敏敏。
+
+<img src="https://tools.minmin11538.cn/matrix/contact/wechat-min11538.jpg" width="180" alt="敏敏的微信二维码">
+
+微信：**min11538** · [敏敏的个人主页](https://me.minmin11538.cn/)
+<!-- minmin-contact:end -->
