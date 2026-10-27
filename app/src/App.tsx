@@ -102,7 +102,7 @@ function clampCardScale(value: number) {
 const BACKGROUNDS: Background[] = [
   ...generatedBackgrounds.map(item => ({ ...item, origin: "minmin" as const })),
 ].map(item => ({ ...item, src: `${import.meta.env.BASE_URL}${item.src.replace(/^\//, "")}` }));
-const BACKGROUND_CATEGORIES = ["商务建筑", "办公空间", "酒店休闲", "海滨湖景", "城市街景", "咖啡餐饮", "艺术书店", "自然庭园", "城市夜景", "雪山雪景", "汽车游艇"];
+const BACKGROUND_CATEGORIES = ["女性都市", "商务建筑", "办公空间", "酒店休闲", "海滨湖景", "城市街景", "咖啡餐饮", "艺术书店", "自然庭园", "城市夜景", "雪山雪景", "汽车游艇"];
 
 function localDate() {
   const now = new Date();

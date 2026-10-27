@@ -13,4 +13,4 @@
 
 支持与限制：已在 macOS 验收；Windows/Linux 尚未实机测试。互动数字是模拟值。图片许可及来源见包内 ASSET-LICENSE.md；用户生成图片不加品牌水印。
 
-GitHub 下载方式：使用仓库 downloads/minmin-matrix-studio-1.2.2.zip 的完整包，或从本安装页取得相同版本；按 release.json 校验。只下载 GitHub 源码时，按 README 构建后再启动。
+GitHub 下载方式：使用版本发布页 https://github.com/mingminwang962-eng/minmin-matrix-studio/releases/tag/v1.3.0 的完整包，或从本安装页取得相同版本；按 release.json 校验。只下载 GitHub 源码时，按 README 构建后再启动。
