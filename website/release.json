@@ -1,17 +1,17 @@
 {
   "name": "minmin-matrix-studio",
-  "version": "1.4.0",
-  "package_url": "https://tools.minmin11538.cn/matrix/downloads/minmin-matrix-studio-1.4.0.zip",
-  "bytes": 100200978,
-  "sha256": "1cbfeb4b86e9d2cc04e1fc1ada919e0114d78aee7e0d4178f3d6049604abdc2f",
+  "version": "1.4.1",
+  "package_url": "https://tools.minmin11538.cn/matrix/downloads/minmin-matrix-studio-1.4.1.zip",
+  "bytes": 100201243,
+  "sha256": "b38d2c91c5a37fad4ced8ce3b69402c9f6b2593f70b55237e90d9e05f15d0293",
   "minimum_node": "22.13.0",
   "backgrounds": 254,
   "verified_platforms": [
     "macOS"
   ],
   "released_at": "2026-11-03",
-  "github_source": "https://github.com/mingminwang962-eng/minmin-matrix-studio/tree/v1.4.0",
-  "github_download_url": "https://github.com/mingminwang962-eng/minmin-matrix-studio/releases/download/v1.4.0/minmin-matrix-studio-1.4.0.zip",
+  "github_source": "https://github.com/mingminwang962-eng/minmin-matrix-studio/tree/v1.4.1",
+  "github_download_url": "https://github.com/mingminwang962-eng/minmin-matrix-studio/releases/download/v1.4.1/minmin-matrix-studio-1.4.1.zip",
   "browser_tests": [
     "Chromium mobile viewport",
     "WebKit mobile viewport",

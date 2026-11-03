@@ -30,7 +30,7 @@ for (const engine of engines) {
       const downloads = [];
       page.on('pageerror', error => errors.push(error.message));
       page.on('download', download => downloads.push(download));
-      await page.goto(url);
+      await page.goto(url, { waitUntil: 'domcontentloaded' });
       await page.getByRole('textbox', { name: '卡片文案' }).fill('手机导出测试。\n原图保存、取消分享及失败回退。');
       await page.locator('.preview-footer .download-button').click();
       const dialog = page.getByRole('dialog', { name: '保存图片', exact: true });
@@ -79,7 +79,7 @@ for (const engine of engines) {
         Object.defineProperty(navigator, 'canShare', { configurable: true, value: undefined });
       });
       const page = await context.newPage();
-      await page.goto(url);
+      await page.goto(url, { waitUntil: 'domcontentloaded' });
       await page.getByRole('textbox', { name: '卡片文案' }).fill('手机与平板保存测试');
       await page.getByRole('button', { name: /9:16/ }).click();
       await page.locator('.preview-footer .download-button').click();
@@ -99,7 +99,7 @@ for (const engine of engines) {
       await context.close();
     }
     const page = await browser.newPage({ viewport: { width: 1440, height: 1100 } });
-    await page.goto(url);
+    await page.goto(url, { waitUntil: 'domcontentloaded' });
     await page.getByRole('textbox', { name: '卡片文案' }).fill('电脑下载和尺寸回归测试。');
     for (const [shape, height] of [['3:4', 1440], ['9:16', 1920]]) {
       if (shape === '9:16') await page.getByRole('button', { name: /9:16/ }).click();

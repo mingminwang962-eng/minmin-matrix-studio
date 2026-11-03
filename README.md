@@ -1,6 +1,6 @@
 # 敏敏矩阵工作台
 
-当前版本：v1.4.0 · [GitHub 完整包](https://tools.minmin11538.cn/matrix/downloads/minmin-matrix-studio-1.4.0.zip) · [下载校验](website/release.json)
+当前版本：v1.4.1 · [GitHub 完整包](https://tools.minmin11538.cn/matrix/downloads/minmin-matrix-studio-1.4.1.zip) · [下载校验](website/release.json)
 
 把自己的文字、头像与背景，做成想分享的图文卡片。
 

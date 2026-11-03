@@ -146,11 +146,24 @@ async function inlineImages(target: HTMLElement) {
     await waitForImage(image);
     const originalSrc = image.getAttribute("src") || "";
     const resolvedSrc = image.currentSrc || image.src;
-    if (!resolvedSrc || resolvedSrc.startsWith("data:")) continue;
+    const svgData = resolvedSrc.startsWith("data:image/svg+xml");
+    if (!resolvedSrc || (resolvedSrc.startsWith("data:") && !svgData)) continue;
 
     const response = await fetch(resolvedSrc, { cache: "force-cache" });
     if (!response.ok) throw new Error("图片读取失败");
-    const dataUrl = await blobToDataUrl(await response.blob());
+    const blob = await response.blob();
+    let dataUrl = await blobToDataUrl(blob);
+    if (svgData || blob.type === "image/svg+xml") {
+      // Nested SVG images can blank WebKit's foreignObject rasterization.
+      const raster = new Image();
+      raster.src = dataUrl;
+      await waitForImage(raster);
+      const canvas = document.createElement("canvas");
+      canvas.width = raster.naturalWidth;
+      canvas.height = raster.naturalHeight;
+      canvas.getContext("2d")!.drawImage(raster, 0, 0);
+      dataUrl = canvas.toDataURL("image/png");
+    }
     replacements.push({ image, originalSrc, dataUrl });
   }
 
@@ -406,7 +419,7 @@ export default function App() {
       await document.fonts.ready;
       restoreImages = await inlineImages(target);
       const pixelRatio = mode === "douyin" ? 1 : 2;
-      const dataUrl = await toPng(target, {
+      const exportOptions: Parameters<typeof toPng>[1] = {
         cacheBust: false,
         pixelRatio,
         style: mode === "card" ? { maxWidth: "none", width: `${target.offsetWidth}px`, transform: "none", position: "static", inset: "auto", margin: "0" } : undefined,
@@ -414,7 +427,10 @@ export default function App() {
         canvasHeight: mode === "douyin" ? (canvasAspect === "tall" ? 1920 : 1440) : undefined,
         filter: node => !(node instanceof HTMLElement && node.classList.contains("card-resize-handle")),
         backgroundColor: mode === "douyin" ? "#0b0b0b" : cardTheme === "light" ? "#ffffff" : "#000000",
-      });
+      };
+      // WebKit can omit embedded images on its first SVG rasterization.
+      await toPng(target, exportOptions);
+      const dataUrl = await toPng(target, exportOptions);
       const link = document.createElement("a");
       const fileName = `minmin-${cardPlatform}-${profile.date || localDate()}-${mode === "douyin" ? (canvasAspect === "tall" ? "1080x1920" : "1080x1440") : "card"}-${orientation}.png`;
       const blob = await (await fetch(dataUrl)).blob();

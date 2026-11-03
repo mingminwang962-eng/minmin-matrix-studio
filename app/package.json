@@ -1,6 +1,6 @@
 {
   "name": "minmin-matrix-studio",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "private": true,
   "type": "module",
   "license": "MIT",
@@ -15,7 +15,7 @@
     "build:server": "tsc -p tsconfig.server.json",
     "preview": "vite preview --host 127.0.0.1 --port 4318 --strictPort",
     "build:thumbnails": "python3 scripts/build-background-thumbnails.py",
-    "test:browser": "node tests/export.browser.mjs"
+    "test:browser": "node tests/export.browser.mjs && node tests/export-content.browser.mjs"
   },
   "dependencies": {
     "@phosphor-icons/react": "2.1.10",
