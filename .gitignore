@@ -4,3 +4,4 @@ app/server-dist/
 website/downloads/
 .DS_Store
 *.log
+.build/

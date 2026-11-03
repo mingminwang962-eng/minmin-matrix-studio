@@ -67,3 +67,18 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 .background-categories { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:8px; }
 .background-categories button { justify-content:center; min-width:0; }
 .preview-toolbar > div { flex-wrap:wrap; justify-content:flex-end; }
+
+/* Saving uses the original PNG on touch devices, with download kept for desktop. */
+.export-thumbnail { padding:0; border:0; background:transparent; cursor:pointer; flex-shrink:0; }
+.export-result > div { min-width:0; }
+.image-save-dialog { position:fixed; inset:0; z-index:1000; width:min(680px,calc(100% - 24px)); max-width:calc(100% - 24px); max-height:calc(100vh - 24px); max-height:calc(100dvh - 24px); margin:auto; padding:20px; border:1px solid var(--line); border-radius:12px; background:var(--panel); color:var(--ink); overflow:auto; overscroll-behavior:contain; }
+.image-save-dialog::backdrop { background:rgba(15,23,42,.65); }
+.image-save-dialog:not(:modal) { box-shadow:0 0 0 100vmax rgba(15,23,42,.65); }
+.image-save-heading { display:flex; justify-content:space-between; align-items:center; gap:12px; }
+.image-save-heading h2 { margin:0; font-size:20px; }
+.image-save-dialog p { font-size:14px; line-height:1.7; margin:14px 0; }
+.image-save-actions { display:flex; flex-wrap:wrap; gap:8px; }
+.image-save-actions > a, .image-save-actions > button, .image-save-heading button { display:inline-flex; align-items:center; justify-content:center; min-height:44px; padding:10px 14px; text-decoration:none; }
+.image-save-notice, .image-save-help { color:var(--muted); }
+.image-save-original { display:block; width:100%; height:auto; max-width:100%; -webkit-touch-callout:default; -webkit-user-select:auto; user-select:auto; touch-action:auto; }
+@media (max-width:400px) { .image-save-dialog { padding:14px; } .image-save-actions > a, .image-save-actions > button { width:100%; } }

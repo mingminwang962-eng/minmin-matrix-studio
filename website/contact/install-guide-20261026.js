@@ -13,12 +13,12 @@
       dialog.setAttribute('aria-describedby', 'mi-steps');
       dialog.innerHTML = `<button class="mi-close" type="button" aria-label="关闭安装指引">×</button>
         <p class="mi-success"><span aria-hidden="true">✓</span> 已复制安装口令</p>
-        <h2 id="mi-title">下一步，<br>粘贴给你的 Agent。</h2>
+        <h2 id="mi-title">去 AI 助手，<br>粘贴并发送。</h2>
         <p class="mi-tool"></p>
         <ol class="mi-steps" id="mi-steps">
-          <li><span>01</span><div>打开正在使用的 Agent 对话框。</div></li>
+          <li><span>01</span><div>打开 WorkBuddy 等 AI 助手的对话框。</div></li>
           <li><span>02</span><div>粘贴刚才的口令，点击发送。<small>Mac：⌘V · Windows：Ctrl+V</small></div></li>
-          <li><span>03</span><div>按 Agent 的提示，完成安装。</div></li>
+          <li><span>03</span><div>按助手提示完成安装，等它报告“安装成功”后再试用。<small>仅复制口令或打开网页，还没有完成安装。</small></div></li>
         </ol>
         <button class="mi-done" type="button" autofocus>知道了，去粘贴 <span aria-hidden="true">↗</span></button>
         <section class="mi-contact" aria-label="联系敏敏">
@@ -34,7 +34,11 @@
         if (event.clientX < box.left || event.clientX > box.right || event.clientY < box.top || event.clientY > box.bottom) dialog.close();
       });
     }
+    dialog.querySelector('.mi-success').lastChild.textContent = ` 已复制「${names[tool]}」安装口令`;
     dialog.querySelector('.mi-tool').textContent = names[tool];
+    const completion = dialog.querySelector('.mi-steps li:last-child div');
+    completion.firstChild.textContent = tool === 'notehelper' ? '按提示接好微信和飞书，转发一条资料并打开飞书验收，再确认定时同步。' : '按助手提示完成安装，等它报告“安装成功”后再试用。';
+    completion.querySelector('small').textContent = tool === 'notehelper' ? '下载、安装完成后，还需要授权和同步测试。' : '仅复制口令或打开网页，还没有完成安装。';
     if (!dialog.open) dialog.showModal();
     const notice = document.querySelector('.install-copy-notice');
     if (notice) notice.hidden = true;

@@ -31,6 +31,7 @@ import {
   useState,
 } from "react";
 import { cleanCardText } from "./textTools";
+import ImageSaveDialog, { type ExportedImage } from "./ImageSaveDialog";
 import generatedBackgrounds from "./generated-backgrounds.json";
 
 type Profile = {
@@ -92,6 +93,8 @@ type Background = {
 };
 
 const BACKGROUND_PAGE_SIZE = 12;
+const ONLINE_DEMO = import.meta.env.VITE_ONLINE_DEMO === "1";
+const DEFAULT_AVATAR = `${import.meta.env.BASE_URL}${ONLINE_DEMO ? "minmin-avatar.jpg" : "default-avatar.svg"}`;
 const MIN_CARD_SCALE = 45;
 const MAX_CARD_SCALE = 140;
 
@@ -160,7 +163,7 @@ async function inlineImages(target: HTMLElement) {
 }
 
 export default function App() {
-  const [profile, setProfile] = useState<Profile>({ name: "你的名字", handle: "", date: localDate(), avatar: `${import.meta.env.BASE_URL}default-avatar.svg` });
+  const [profile, setProfile] = useState<Profile>({ name: ONLINE_DEMO ? "敏敏minmin" : "你的名字", handle: ONLINE_DEMO ? "@min11538" : "", date: localDate(), avatar: DEFAULT_AVATAR });
   const metricVariant = useRef(Date.now());
   const [metrics, setMetrics] = useState<Metrics>(() => demoMetrics(metricVariant.current));
   const [activeTool, setActiveTool] = useState("author");
@@ -186,12 +189,23 @@ export default function App() {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isDownloading, setIsDownloading] = useState(false);
   const [loadError, setLoadError] = useState("");
-  const [exported, setExported] = useState<{ url: string; name: string } | null>(null);
+  const [exported, setExported] = useState<ExportedImage | null>(null);
+  const [showSaveDialog, setShowSaveDialog] = useState(false);
+  const [mobileSave, setMobileSave] = useState(() => window.matchMedia("(pointer: coarse), (max-width: 700px)").matches);
   const [canvasWidth, setCanvasWidth] = useState(720);
   const artboardRef = useRef<HTMLDivElement>(null);
   const tweetCardRef = useRef<HTMLElement>(null);
   const dragRef = useRef({ active: false, clientX: 0, clientY: 0, x: 0, y: 0 });
   const resizeRef = useRef({ active: false, clientX: 0, clientY: 0, scale: 90 });
+
+  useEffect(() => {
+    const media = window.matchMedia("(pointer: coarse), (max-width: 700px)");
+    const update = () => setMobileSave(media.matches);
+    media.addListener(update);
+    return () => media.removeListener(update);
+  }, []);
+
+  useEffect(() => () => { if (exported) URL.revokeObjectURL(exported.url); }, [exported]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
@@ -403,10 +417,17 @@ export default function App() {
       });
       const link = document.createElement("a");
       const fileName = `minmin-${cardPlatform}-${profile.date || localDate()}-${mode === "douyin" ? (canvasAspect === "tall" ? "1080x1920" : "1080x1440") : "card"}-${orientation}.png`;
-      setExported({ url: dataUrl, name: fileName });
-      link.download = fileName;
-      link.href = dataUrl;
-      link.click();
+      const blob = await (await fetch(dataUrl)).blob();
+      const file = new File([blob], fileName, { type: "image/png" });
+      const url = URL.createObjectURL(file);
+      setExported({ url, name: fileName, file });
+      if (mobileSave) setShowSaveDialog(true);
+      else {
+        link.download = fileName;
+        link.href = url;
+        link.click();
+      }
+      window.dispatchEvent(new Event("minmin:matrix-export"));
     } catch {
       setLoadError("图片导出失败，请检查图片是否加载完成，或重新上传图片。");
     } finally {
@@ -420,7 +441,7 @@ export default function App() {
     <main className="app-shell">
       <header className="topbar">
         <div className="brand-lockup">
-          <div className="brand-mark"><img src={profile.avatar || `${import.meta.env.BASE_URL}default-avatar.svg`} alt="工作台头像" /></div>
+          <div className="brand-mark"><img src={profile.avatar || DEFAULT_AVATAR} alt="工作台头像" /></div>
           <div>
             <p className="eyebrow">MINMIN MATRIX STUDIO</p>
             <h1>敏敏矩阵工作台</h1>
@@ -620,19 +641,20 @@ export default function App() {
             <div>
               <button className="download-button" onClick={() => downloadImage()} disabled={isDownloading || selectingBackground || !previewText.trim()}>
                 {isDownloading ? <LoaderCircle className="spin" size={17} /> : <Download size={17} />}
-                {isDownloading ? "正在生成" : "导出 PNG"}
+                {isDownloading ? "正在生成" : mobileSave ? "生成并保存图片" : "导出 PNG"}
               </button>
             </div>
           </div>
           {loadError && <p className="export-notice" role="alert">{loadError}</p>}
           {exported && (
             <section className="export-result" aria-label="已生成图片">
-              <a href={exported.url} download={exported.name}><img src={exported.url} alt="已生成 PNG 预览" /></a>
-              <div><strong>图片已生成</strong><p>点击保存本次导出的 PNG。修改内容后请重新导出。</p><a href={exported.url} download={exported.name}>保存图片</a></div>
+              <button type="button" className="export-thumbnail" aria-label="查看并保存原图" onClick={() => setShowSaveDialog(true)}><img src={exported.url} alt="已生成 PNG 预览" /></button>
+              <div><strong>图片已生成</strong><p>手机可打开原图长按保存。修改内容后请重新生成。</p><button type="button" className="secondary-button" onClick={() => setShowSaveDialog(true)}>查看原图 / 保存</button></div>
             </section>
           )}
         </section>
       </div>
+      {exported && showSaveDialog && <ImageSaveDialog image={exported} onClose={() => setShowSaveDialog(false)} />}
     </main>
   );
 }
