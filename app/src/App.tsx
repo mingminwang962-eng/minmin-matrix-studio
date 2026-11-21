@@ -33,6 +33,7 @@ import {
 import { cleanCardText } from "./textTools";
 import ImageSaveDialog, { type ExportedImage } from "./ImageSaveDialog";
 import generatedBackgrounds from "./generated-backgrounds.json";
+import { readPhotos, savePhoto, type PhotoKind } from "./photoStorage";
 
 type Profile = {
   name: string;
@@ -105,7 +106,7 @@ function clampCardScale(value: number) {
 const BACKGROUNDS: Background[] = [
   ...generatedBackgrounds.map(item => ({ ...item, origin: "minmin" as const })),
 ].map(item => ({ ...item, src: `${import.meta.env.BASE_URL}${item.src.replace(/^\//, "")}` }));
-const BACKGROUND_CATEGORIES = ["女性都市", "商务建筑", "办公空间", "酒店休闲", "海滨湖景", "城市街景", "咖啡餐饮", "艺术书店", "自然庭园", "城市夜景", "雪山雪景", "汽车游艇"];
+const BACKGROUND_CATEGORIES = ["Ins生活", "Clean Girl", "欧式空间", "高级餐厅", "高级职场", "混合场景", "早期选景稿", "女性都市", "商务建筑", "办公空间", "酒店休闲", "海滨湖景", "城市街景", "咖啡餐饮", "艺术书店", "自然庭园", "城市夜景", "雪山雪景", "汽车游艇"];
 
 function localDate() {
   const now = new Date();
@@ -194,6 +195,8 @@ export default function App() {
   const selectionRequest = useRef(0);
   const [customBackground, setCustomBackground] = useState<string | null>(null);
   const [backgroundUrl, setBackgroundUrl] = useState("");
+  const photoChanges = useRef({ avatar: 0, background: 0 });
+  const [photoStatus, setPhotoStatus] = useState({ avatar: "", background: "" });
   const [loadingBackground, setLoadingBackground] = useState(false);
   const [dim, setDim] = useState(0);
   const [cardScale, setCardScale] = useState(90);
@@ -210,6 +213,51 @@ export default function App() {
   const tweetCardRef = useRef<HTMLElement>(null);
   const dragRef = useRef({ active: false, clientX: 0, clientY: 0, x: 0, y: 0 });
   const resizeRef = useRef({ active: false, clientX: 0, clientY: 0, scale: 90 });
+
+  useEffect(() => {
+    let cancelled = false;
+    const original = { ...photoChanges.current };
+    void readPhotos().then(photos => {
+      if (cancelled) return;
+      if (photos.avatar && original.avatar === photoChanges.current.avatar) {
+        setProfile(current => ({ ...current, avatar: photos.avatar }));
+        setPhotoStatus(current => ({ ...current, avatar: "已保存在此浏览器，重开可继续用。" }));
+      }
+      if (photos.background && original.background === photoChanges.current.background) {
+        setCustomBackground(photos.background);
+        setPhotoStatus(current => ({ ...current, background: "已保存在此浏览器，重开可继续用。" }));
+      }
+    }).catch(() => {});
+    return () => { cancelled = true; };
+  }, []);
+
+  async function rememberPhoto(kind: PhotoKind, dataUrl: string | null) {
+    const change = photoChanges.current[kind];
+    setPhotoStatus(current => ({ ...current, [kind]: dataUrl ? "正在保存照片…" : "正在移除照片…" }));
+    try {
+      await savePhoto(kind, dataUrl);
+      if (change !== photoChanges.current[kind]) return;
+      setPhotoStatus(current => ({ ...current, [kind]: dataUrl ? "已保存在此浏览器，重开可继续用。" : "" }));
+    } catch {
+      if (change !== photoChanges.current[kind]) return;
+      setPhotoStatus(current => ({ ...current, [kind]: dataUrl ? "照片本次可用，但浏览器未能保存；重开后需重新上传。" : "未能清除已存照片，请重试。" }));
+    }
+  }
+
+  async function removePhoto(kind: PhotoKind) {
+    const change = ++photoChanges.current[kind];
+    if (kind === "background") selectionRequest.current++;
+    setPhotoStatus(current => ({ ...current, [kind]: "正在移除照片…" }));
+    try {
+      await savePhoto(kind, null);
+      if (change !== photoChanges.current[kind]) return;
+      if (kind === "avatar") setProfile(current => ({ ...current, avatar: DEFAULT_AVATAR }));
+      else setCustomBackground(null);
+      setPhotoStatus(current => ({ ...current, [kind]: "" }));
+    } catch {
+      if (change === photoChanges.current[kind]) setPhotoStatus(current => ({ ...current, [kind]: "未能清除已存照片，请重试。" }));
+    }
+  }
 
   useEffect(() => {
     const media = window.matchMedia("(pointer: coarse), (max-width: 700px)");
@@ -270,6 +318,7 @@ export default function App() {
   }, [filteredBackgrounds, backgroundPage]);
 
   async function selectBackground(background: Background) {
+    photoChanges.current.background++;
     const request = ++selectionRequest.current;
     setSelectingBackground(true);
     try {
@@ -279,6 +328,7 @@ export default function App() {
       if (request !== selectionRequest.current) return;
       setSelectedBackground(background);
       setCustomBackground(null);
+      void rememberPhoto("background", null);
       setExported(null);
       setLoadError("");
     } catch {
@@ -308,6 +358,7 @@ export default function App() {
 
   async function useBackgroundUrl() {
     if (!backgroundUrl.trim()) return;
+    photoChanges.current.background++;
     setLoadingBackground(true);
     const request = ++selectionRequest.current;
     setSelectingBackground(false);
@@ -322,6 +373,7 @@ export default function App() {
       const image = await blobToDataUrl(blob);
       if (request !== selectionRequest.current) return;
       setCustomBackground(image);
+      void rememberPhoto("background", image);
       setLoadError("");
     } catch {
       setLoadError("网络图片无法读取，请检查链接，或保存图片后通过“上传自己的背景”导入。");
@@ -334,13 +386,15 @@ export default function App() {
       setLoadError("请选择图片文件。");
       return;
     }
+    const photoChange = ++photoChanges.current[kind];
     const request = kind === "background" ? ++selectionRequest.current : 0;
     if (kind === "background") setSelectingBackground(false);
     try {
       const dataUrl = await blobToDataUrl(file);
-      if (kind === "background" && request !== selectionRequest.current) return;
+      if (photoChange !== photoChanges.current[kind] || (kind === "background" && request !== selectionRequest.current)) return;
       if (kind === "avatar") setProfile((current) => ({ ...current, avatar: dataUrl }));
       else setCustomBackground(dataUrl);
+      void rememberPhoto(kind, dataUrl);
       setLoadError("");
     } catch {
       setLoadError("图片读取失败，请重新选择。");
@@ -485,6 +539,7 @@ export default function App() {
                 <input type="file" accept="image/*" aria-label="上传头像" onChange={(event) => handleUpload(event.target.files?.[0], "avatar")} />
               </label>
             </div>
+            <p className="filter-summary" aria-live="polite" data-photo-status="avatar">{photoStatus.avatar || "上传的头像会保存在此浏览器，不会传到服务器。"} {(profile.avatar?.startsWith("data:image/") || photoStatus.avatar.startsWith("未能清除")) && <button className="secondary-button" type="button" onClick={() => removePhoto("avatar")}>移除头像</button>}</p>
             <div className="profile-fields">
               <label>显示名称<input value={profile.name} maxLength={30} onChange={(event) => setProfile({ ...profile, name: event.target.value })} /></label>
               {cardPlatform === "x" && <label>X 账号（可留空）<input value={profile.handle} maxLength={32} placeholder="@你的账号" onChange={(event) => setProfile({ ...profile, handle: event.target.value })} /></label>}
@@ -576,6 +631,7 @@ export default function App() {
                 <Upload size={17} /> 上传自己的背景
                 <input type="file" accept="image/*" onChange={(event) => handleUpload(event.target.files?.[0], "background")} />
               </label>
+              <p className="filter-summary" aria-live="polite" data-photo-status="background">{photoStatus.background || "上传的背景会保存在此浏览器，不会传到服务器。"} {(customBackground || photoStatus.background.startsWith("未能清除")) && <button className="secondary-button" type="button" onClick={() => removePhoto("background")}>移除背景</button>}</p>
               <RangeControl label="背景压暗" value={`${dim}%`} min={0} max={55} current={dim} onChange={setDim} />
               <CardScaleControl current={cardScale} onChange={setCardScale} onFit={fitCardToCanvas} />
               <div className="drag-help"><Move size={16} /> 在右侧拖动卡片调整位置 <button onClick={() => setPosition({ x: 0, y: 0 })}><RefreshCw size={14} /> 居中重置</button></div>

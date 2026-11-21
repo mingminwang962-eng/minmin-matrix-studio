@@ -1,5 +1,597 @@
 [
   {
+    "id": "minmin-a224ba0c35fbf453",
+    "name": "奶油复古黑胶客厅",
+    "src": "/backgrounds-optimized/minmin-a224ba0c35fbf453.webp",
+    "category": "Ins生活",
+    "origin": "minmin",
+    "keywords": "Ins生活 口播背景 竖图 室内 场景 奶油复古黑胶客厅"
+  },
+  {
+    "id": "minmin-f8edaa6076c26183",
+    "name": "陶土色艺术公寓",
+    "src": "/backgrounds-optimized/minmin-f8edaa6076c26183.webp",
+    "category": "Ins生活",
+    "origin": "minmin",
+    "keywords": "Ins生活 口播背景 竖图 室内 场景 陶土色艺术公寓"
+  },
+  {
+    "id": "minmin-a2f7c1c2e438c108",
+    "name": "哥本哈根彩色中古",
+    "src": "/backgrounds-optimized/minmin-a2f7c1c2e438c108.webp",
+    "category": "Ins生活",
+    "origin": "minmin",
+    "keywords": "Ins生活 口播背景 竖图 室内 场景 哥本哈根彩色中古"
+  },
+  {
+    "id": "minmin-31f067594f6e7e3b",
+    "name": "巴黎花店咖啡角",
+    "src": "/backgrounds-optimized/minmin-31f067594f6e7e3b.webp",
+    "category": "Ins生活",
+    "origin": "minmin",
+    "keywords": "Ins生活 口播背景 竖图 室内 场景 巴黎花店咖啡角"
+  },
+  {
+    "id": "minmin-c1c2c2aaef02a405",
+    "name": "纽约Loft阅读客厅",
+    "src": "/backgrounds-optimized/minmin-c1c2c2aaef02a405.webp",
+    "category": "Ins生活",
+    "origin": "minmin",
+    "keywords": "Ins生活 口播背景 竖图 室内 场景 纽约Loft阅读客厅"
+  },
+  {
+    "id": "minmin-c34b96bd47d3e21f",
+    "name": "奶油蓝窗边早餐区",
+    "src": "/backgrounds-optimized/minmin-c34b96bd47d3e21f.webp",
+    "category": "Ins生活",
+    "origin": "minmin",
+    "keywords": "Ins生活 口播背景 竖图 室内 场景 奶油蓝窗边早餐区"
+  },
+  {
+    "id": "minmin-46dc2e044785ff44",
+    "name": "橄榄绿中古沙龙",
+    "src": "/backgrounds-optimized/minmin-46dc2e044785ff44.webp",
+    "category": "Ins生活",
+    "origin": "minmin",
+    "keywords": "Ins生活 口播背景 竖图 室内 场景 橄榄绿中古沙龙"
+  },
+  {
+    "id": "minmin-76caf02d6c0c307c",
+    "name": "勃艮第红精品公寓",
+    "src": "/backgrounds-optimized/minmin-76caf02d6c0c307c.webp",
+    "category": "Ins生活",
+    "origin": "minmin",
+    "keywords": "Ins生活 口播背景 竖图 室内 场景 勃艮第红精品公寓"
+  },
+  {
+    "id": "minmin-bb9e85d129ab9179",
+    "name": "海边民宿编织客厅",
+    "src": "/backgrounds-optimized/minmin-bb9e85d129ab9179.webp",
+    "category": "Ins生活",
+    "origin": "minmin",
+    "keywords": "Ins生活 口播背景 竖图 室内 场景 海边民宿编织客厅"
+  },
+  {
+    "id": "minmin-f4d603f0dd7c79b4",
+    "name": "法式厨房咖啡角",
+    "src": "/backgrounds-optimized/minmin-f4d603f0dd7c79b4.webp",
+    "category": "Ins生活",
+    "origin": "minmin",
+    "keywords": "Ins生活 口播背景 竖图 室内 场景 法式厨房咖啡角"
+  },
+  {
+    "id": "minmin-c7326d28c069ac56",
+    "name": "都市花园玻璃暖房",
+    "src": "/backgrounds-optimized/minmin-c7326d28c069ac56.webp",
+    "category": "Ins生活",
+    "origin": "minmin",
+    "keywords": "Ins生活 口播背景 竖图 室内 场景 都市花园玻璃暖房"
+  },
+  {
+    "id": "minmin-70a9ea286e1d6080",
+    "name": "艺术家画架工作室",
+    "src": "/backgrounds-optimized/minmin-70a9ea286e1d6080.webp",
+    "category": "Ins生活",
+    "origin": "minmin",
+    "keywords": "Ins生活 口播背景 竖图 室内 场景 艺术家画架工作室"
+  },
+  {
+    "id": "minmin-1aa9325853789d19",
+    "name": "浅灰棕静奢客厅",
+    "src": "/backgrounds-optimized/minmin-1aa9325853789d19.webp",
+    "category": "Ins生活",
+    "origin": "minmin",
+    "keywords": "Ins生活 口播背景 竖图 室内 场景 浅灰棕静奢客厅"
+  },
+  {
+    "id": "minmin-e8fc883802e5ccb7",
+    "name": "伦敦雨天咖啡馆",
+    "src": "/backgrounds-optimized/minmin-e8fc883802e5ccb7.webp",
+    "category": "Ins生活",
+    "origin": "minmin",
+    "keywords": "Ins生活 口播背景 竖图 室内 场景 伦敦雨天咖啡馆"
+  },
+  {
+    "id": "minmin-8f7d66c42bb85697",
+    "name": "复古唱片书店",
+    "src": "/backgrounds-optimized/minmin-8f7d66c42bb85697.webp",
+    "category": "Ins生活",
+    "origin": "minmin",
+    "keywords": "Ins生活 口播背景 竖图 室内 场景 复古唱片书店"
+  },
+  {
+    "id": "minmin-3076963c15035a9c",
+    "name": "柔粉法式起居室",
+    "src": "/backgrounds-optimized/minmin-3076963c15035a9c.webp",
+    "category": "Ins生活",
+    "origin": "minmin",
+    "keywords": "Ins生活 口播背景 竖图 室内 场景 柔粉法式起居室"
+  },
+  {
+    "id": "minmin-114e837d0111f43c",
+    "name": "包豪斯现代公寓",
+    "src": "/backgrounds-optimized/minmin-114e837d0111f43c.webp",
+    "category": "Ins生活",
+    "origin": "minmin",
+    "keywords": "Ins生活 口播背景 竖图 室内 场景 包豪斯现代公寓"
+  },
+  {
+    "id": "minmin-7174dee5a3c4a1de",
+    "name": "地中海拱门会客区",
+    "src": "/backgrounds-optimized/minmin-7174dee5a3c4a1de.webp",
+    "category": "Ins生活",
+    "origin": "minmin",
+    "keywords": "Ins生活 口播背景 竖图 室内 场景 地中海拱门会客区"
+  },
+  {
+    "id": "minmin-f87969bc982b04e4",
+    "name": "绿植白砖城市阳台",
+    "src": "/backgrounds-optimized/minmin-f87969bc982b04e4.webp",
+    "category": "Ins生活",
+    "origin": "minmin",
+    "keywords": "Ins生活 口播背景 竖图 室内 场景 绿植白砖城市阳台"
+  },
+  {
+    "id": "minmin-f248ca210a249146",
+    "name": "时尚编辑生活书房",
+    "src": "/backgrounds-optimized/minmin-f248ca210a249146.webp",
+    "category": "Ins生活",
+    "origin": "minmin",
+    "keywords": "Ins生活 口播背景 竖图 室内 场景 时尚编辑生活书房"
+  },
+  {
+    "id": "minmin-5393688f935140f9",
+    "name": "巴黎奥斯曼客厅",
+    "src": "/backgrounds-optimized/minmin-5393688f935140f9.webp",
+    "category": "欧式空间",
+    "origin": "minmin",
+    "keywords": "欧式空间 口播背景 竖图 室内 场景 巴黎奥斯曼客厅"
+  },
+  {
+    "id": "minmin-08b4069e611e9f1d",
+    "name": "英式乡村书房",
+    "src": "/backgrounds-optimized/minmin-08b4069e611e9f1d.webp",
+    "category": "欧式空间",
+    "origin": "minmin",
+    "keywords": "欧式空间 口播背景 竖图 室内 场景 英式乡村书房"
+  },
+  {
+    "id": "minmin-76eee986b723b2b2",
+    "name": "托斯卡纳庄园客厅",
+    "src": "/backgrounds-optimized/minmin-76eee986b723b2b2.webp",
+    "category": "欧式空间",
+    "origin": "minmin",
+    "keywords": "欧式空间 口播背景 竖图 室内 场景 托斯卡纳庄园客厅"
+  },
+  {
+    "id": "minmin-f760770a068f5a9d",
+    "name": "维也纳古典咖啡馆",
+    "src": "/backgrounds-optimized/minmin-f760770a068f5a9d.webp",
+    "category": "欧式空间",
+    "origin": "minmin",
+    "keywords": "欧式空间 口播背景 竖图 室内 场景 维也纳古典咖啡馆"
+  },
+  {
+    "id": "minmin-deab26d2c1a7f45c",
+    "name": "米兰中古设计公寓",
+    "src": "/backgrounds-optimized/minmin-deab26d2c1a7f45c.webp",
+    "category": "欧式空间",
+    "origin": "minmin",
+    "keywords": "欧式空间 口播背景 竖图 室内 场景 米兰中古设计公寓"
+  },
+  {
+    "id": "minmin-8a40eaf818b6d4a6",
+    "name": "北欧古典浅色客厅",
+    "src": "/backgrounds-optimized/minmin-8a40eaf818b6d4a6.webp",
+    "category": "欧式空间",
+    "origin": "minmin",
+    "keywords": "欧式空间 口播背景 竖图 室内 场景 北欧古典浅色客厅"
+  },
+  {
+    "id": "minmin-a69678161701aa19",
+    "name": "普罗旺斯花园暖房",
+    "src": "/backgrounds-optimized/minmin-a69678161701aa19.webp",
+    "category": "欧式空间",
+    "origin": "minmin",
+    "keywords": "欧式空间 口播背景 竖图 室内 场景 普罗旺斯花园暖房"
+  },
+  {
+    "id": "minmin-fe93bcd0cc1b2190",
+    "name": "英伦联排宅邸会客厅",
+    "src": "/backgrounds-optimized/minmin-fe93bcd0cc1b2190.webp",
+    "category": "欧式空间",
+    "origin": "minmin",
+    "keywords": "欧式空间 口播背景 竖图 室内 场景 英伦联排宅邸会客厅"
+  },
+  {
+    "id": "minmin-2b765cc87d25addd",
+    "name": "威尼斯宫邸沙龙",
+    "src": "/backgrounds-optimized/minmin-2b765cc87d25addd.webp",
+    "category": "欧式空间",
+    "origin": "minmin",
+    "keywords": "欧式空间 口播背景 竖图 室内 场景 威尼斯宫邸沙龙"
+  },
+  {
+    "id": "minmin-18effd0fc01db01a",
+    "name": "现代欧式艺术沙龙",
+    "src": "/backgrounds-optimized/minmin-18effd0fc01db01a.webp",
+    "category": "欧式空间",
+    "origin": "minmin",
+    "keywords": "欧式空间 口播背景 竖图 室内 场景 现代欧式艺术沙龙"
+  },
+  {
+    "id": "minmin-2a51a169bf60bd80",
+    "name": "都市高层办公室",
+    "src": "/backgrounds-optimized/minmin-2a51a169bf60bd80.webp",
+    "category": "高级职场",
+    "origin": "minmin",
+    "keywords": "高级职场 口播背景 竖图 室内 场景 都市高层办公室"
+  },
+  {
+    "id": "minmin-e7f64872d3e69cc5",
+    "name": "奶油白创意事务所",
+    "src": "/backgrounds-optimized/minmin-e7f64872d3e69cc5.webp",
+    "category": "高级职场",
+    "origin": "minmin",
+    "keywords": "高级职场 口播背景 竖图 室内 场景 奶油白创意事务所"
+  },
+  {
+    "id": "minmin-db339e96ac602a5e",
+    "name": "胡桃木合伙人办公室",
+    "src": "/backgrounds-optimized/minmin-db339e96ac602a5e.webp",
+    "category": "高级职场",
+    "origin": "minmin",
+    "keywords": "高级职场 口播背景 竖图 室内 场景 胡桃木合伙人办公室"
+  },
+  {
+    "id": "minmin-60726ce799f4a813",
+    "name": "极简科技总部",
+    "src": "/backgrounds-optimized/minmin-60726ce799f4a813.webp",
+    "category": "高级职场",
+    "origin": "minmin",
+    "keywords": "高级职场 口播背景 竖图 室内 场景 极简科技总部"
+  },
+  {
+    "id": "minmin-a4bc3aacf36936ce",
+    "name": "法式时尚工作室",
+    "src": "/backgrounds-optimized/minmin-a4bc3aacf36936ce.webp",
+    "category": "高级职场",
+    "origin": "minmin",
+    "keywords": "高级职场 口播背景 竖图 室内 场景 法式时尚工作室"
+  },
+  {
+    "id": "minmin-6531b1b9fc384b47",
+    "name": "现代艺术总监办公室",
+    "src": "/backgrounds-optimized/minmin-6531b1b9fc384b47.webp",
+    "category": "高级职场",
+    "origin": "minmin",
+    "keywords": "高级职场 口播背景 竖图 室内 场景 现代艺术总监办公室"
+  },
+  {
+    "id": "minmin-e241d69f023e8915",
+    "name": "金融区夜景办公室",
+    "src": "/backgrounds-optimized/minmin-e241d69f023e8915.webp",
+    "category": "高级职场",
+    "origin": "minmin",
+    "keywords": "高级职场 口播背景 竖图 室内 场景 金融区夜景办公室"
+  },
+  {
+    "id": "minmin-4a809834696052b2",
+    "name": "花园总部会客区",
+    "src": "/backgrounds-optimized/minmin-4a809834696052b2.webp",
+    "category": "高级职场",
+    "origin": "minmin",
+    "keywords": "高级职场 口播背景 竖图 室内 场景 花园总部会客区"
+  },
+  {
+    "id": "minmin-177ab6f94d5df3f0",
+    "name": "新中式企业办公室",
+    "src": "/backgrounds-optimized/minmin-177ab6f94d5df3f0.webp",
+    "category": "高级职场",
+    "origin": "minmin",
+    "keywords": "高级职场 口播背景 竖图 室内 场景 新中式企业办公室"
+  },
+  {
+    "id": "minmin-7b50422d20983bee",
+    "name": "高端联合办公休息区",
+    "src": "/backgrounds-optimized/minmin-7b50422d20983bee.webp",
+    "category": "高级职场",
+    "origin": "minmin",
+    "keywords": "高级职场 口播背景 竖图 室内 场景 高端联合办公休息区"
+  },
+  {
+    "id": "minmin-45c7be9863e3b4cc",
+    "name": "巴黎法式餐厅",
+    "src": "/backgrounds-optimized/minmin-45c7be9863e3b4cc.webp",
+    "category": "高级餐厅",
+    "origin": "minmin",
+    "keywords": "高级餐厅 口播背景 竖图 室内 场景 巴黎法式餐厅"
+  },
+  {
+    "id": "minmin-eab7215c86c62080",
+    "name": "米兰现代意式",
+    "src": "/backgrounds-optimized/minmin-eab7215c86c62080.webp",
+    "category": "高级餐厅",
+    "origin": "minmin",
+    "keywords": "高级餐厅 口播背景 竖图 室内 场景 米兰现代意式"
+  },
+  {
+    "id": "minmin-8b46f19fd1be1480",
+    "name": "京都日式割烹",
+    "src": "/backgrounds-optimized/minmin-8b46f19fd1be1480.webp",
+    "category": "高级餐厅",
+    "origin": "minmin",
+    "keywords": "高级餐厅 口播背景 竖图 室内 场景 京都日式割烹"
+  },
+  {
+    "id": "minmin-2254e16f1d5c5c5c",
+    "name": "江南新中式雅宴",
+    "src": "/backgrounds-optimized/minmin-2254e16f1d5c5c5c.webp",
+    "category": "高级餐厅",
+    "origin": "minmin",
+    "keywords": "高级餐厅 口播背景 竖图 室内 场景 江南新中式雅宴"
+  },
+  {
+    "id": "minmin-6b6a161cb9a694df",
+    "name": "地中海海景餐厅",
+    "src": "/backgrounds-optimized/minmin-6b6a161cb9a694df.webp",
+    "category": "高级餐厅",
+    "origin": "minmin",
+    "keywords": "高级餐厅 口播背景 竖图 室内 场景 地中海海景餐厅"
+  },
+  {
+    "id": "minmin-d9fb64ae2bd4ca28",
+    "name": "曼哈顿高空夜宴",
+    "src": "/backgrounds-optimized/minmin-d9fb64ae2bd4ca28.webp",
+    "category": "高级餐厅",
+    "origin": "minmin",
+    "keywords": "高级餐厅 口播背景 竖图 室内 场景 曼哈顿高空夜宴"
+  },
+  {
+    "id": "minmin-4602a610f41f43da",
+    "name": "ArtDeco复古餐厅",
+    "src": "/backgrounds-optimized/minmin-4602a610f41f43da.webp",
+    "category": "高级餐厅",
+    "origin": "minmin",
+    "keywords": "高级餐厅 口播背景 竖图 室内 场景 ArtDeco复古餐厅"
+  },
+  {
+    "id": "minmin-7fe209698f2df689",
+    "name": "北欧米其林风餐厅",
+    "src": "/backgrounds-optimized/minmin-7fe209698f2df689.webp",
+    "category": "高级餐厅",
+    "origin": "minmin",
+    "keywords": "高级餐厅 口播背景 竖图 室内 场景 北欧米其林风餐厅"
+  },
+  {
+    "id": "minmin-9927f98b955d26a2",
+    "name": "托斯卡纳酒窖餐厅",
+    "src": "/backgrounds-optimized/minmin-9927f98b955d26a2.webp",
+    "category": "高级餐厅",
+    "origin": "minmin",
+    "keywords": "高级餐厅 口播背景 竖图 室内 场景 托斯卡纳酒窖餐厅"
+  },
+  {
+    "id": "minmin-feb14abe0732e377",
+    "name": "热带花园餐厅",
+    "src": "/backgrounds-optimized/minmin-feb14abe0732e377.webp",
+    "category": "高级餐厅",
+    "origin": "minmin",
+    "keywords": "高级餐厅 口播背景 竖图 室内 场景 热带花园餐厅"
+  },
+  {
+    "id": "minmin-b5dabc9061273711",
+    "name": "奶油亚麻公寓",
+    "src": "/backgrounds-optimized/minmin-b5dabc9061273711.webp",
+    "category": "Clean Girl",
+    "origin": "minmin",
+    "keywords": "Clean Girl 口播背景 竖图 室内 场景 奶油亚麻公寓"
+  },
+  {
+    "id": "minmin-346010c63f3e1460",
+    "name": "巴黎街角咖啡馆",
+    "src": "/backgrounds-optimized/minmin-346010c63f3e1460.webp",
+    "category": "Clean Girl",
+    "origin": "minmin",
+    "keywords": "Clean Girl 口播背景 竖图 室内 场景 巴黎街角咖啡馆"
+  },
+  {
+    "id": "minmin-5efe77b5b4586be6",
+    "name": "浅木极简书房",
+    "src": "/backgrounds-optimized/minmin-5efe77b5b4586be6.webp",
+    "category": "Clean Girl",
+    "origin": "minmin",
+    "keywords": "Clean Girl 口播背景 竖图 室内 场景 浅木极简书房"
+  },
+  {
+    "id": "minmin-4ecbff28cd3fa371",
+    "name": "橄榄树阳台",
+    "src": "/backgrounds-optimized/minmin-4ecbff28cd3fa371.webp",
+    "category": "Clean Girl",
+    "origin": "minmin",
+    "keywords": "Clean Girl 口播背景 竖图 室内 场景 橄榄树阳台"
+  },
+  {
+    "id": "minmin-3e90fb89a7244408",
+    "name": "白花窗边客厅",
+    "src": "/backgrounds-optimized/minmin-3e90fb89a7244408.webp",
+    "category": "Clean Girl",
+    "origin": "minmin",
+    "keywords": "Clean Girl 口播背景 竖图 室内 场景 白花窗边客厅"
+  },
+  {
+    "id": "minmin-d1bc00518f84f3bd",
+    "name": "浅灰法式公寓",
+    "src": "/backgrounds-optimized/minmin-d1bc00518f84f3bd.webp",
+    "category": "Clean Girl",
+    "origin": "minmin",
+    "keywords": "Clean Girl 口播背景 竖图 室内 场景 浅灰法式公寓"
+  },
+  {
+    "id": "minmin-fe9dde1174a97404",
+    "name": "浅石日光厨房",
+    "src": "/backgrounds-optimized/minmin-fe9dde1174a97404.webp",
+    "category": "Clean Girl",
+    "origin": "minmin",
+    "keywords": "Clean Girl 口播背景 竖图 室内 场景 浅石日光厨房"
+  },
+  {
+    "id": "minmin-c24c99a6c35da5de",
+    "name": "白纱海边公寓",
+    "src": "/backgrounds-optimized/minmin-c24c99a6c35da5de.webp",
+    "category": "Clean Girl",
+    "origin": "minmin",
+    "keywords": "Clean Girl 口播背景 竖图 室内 场景 白纱海边公寓"
+  },
+  {
+    "id": "minmin-6a9e6dc1a1e3e178",
+    "name": "绿荫庭院露台",
+    "src": "/backgrounds-optimized/minmin-6a9e6dc1a1e3e178.webp",
+    "category": "Clean Girl",
+    "origin": "minmin",
+    "keywords": "Clean Girl 口播背景 竖图 室内 场景 绿荫庭院露台"
+  },
+  {
+    "id": "minmin-b194b20194798f80",
+    "name": "米白艺术阅读角",
+    "src": "/backgrounds-optimized/minmin-b194b20194798f80.webp",
+    "category": "Clean Girl",
+    "origin": "minmin",
+    "keywords": "Clean Girl 口播背景 竖图 室内 场景 米白艺术阅读角"
+  },
+  {
+    "id": "minmin-6a27898bca8fb621",
+    "name": "雨天都市窗景",
+    "src": "/backgrounds-optimized/minmin-6a27898bca8fb621.webp",
+    "category": "混合场景",
+    "origin": "minmin",
+    "keywords": "混合场景 口播背景 竖图 室内 场景 雨天都市窗景"
+  },
+  {
+    "id": "minmin-9d9697313d693c25",
+    "name": "琥珀夜色会客厅",
+    "src": "/backgrounds-optimized/minmin-9d9697313d693c25.webp",
+    "category": "混合场景",
+    "origin": "minmin",
+    "keywords": "混合场景 口播背景 竖图 室内 场景 琥珀夜色会客厅"
+  },
+  {
+    "id": "minmin-ed3fd285736c4a46",
+    "name": "黄昏林荫露台",
+    "src": "/backgrounds-optimized/minmin-ed3fd285736c4a46.webp",
+    "category": "混合场景",
+    "origin": "minmin",
+    "keywords": "混合场景 口播背景 竖图 室内 场景 黄昏林荫露台"
+  },
+  {
+    "id": "minmin-31ccd0524a6876a8",
+    "name": "钴蓝艺术工作室",
+    "src": "/backgrounds-optimized/minmin-31ccd0524a6876a8.webp",
+    "category": "混合场景",
+    "origin": "minmin",
+    "keywords": "混合场景 口播背景 竖图 室内 场景 钴蓝艺术工作室"
+  },
+  {
+    "id": "minmin-f08ce4d42eb77d6e",
+    "name": "东方庭院茶室",
+    "src": "/backgrounds-optimized/minmin-f08ce4d42eb77d6e.webp",
+    "category": "混合场景",
+    "origin": "minmin",
+    "keywords": "混合场景 口播背景 竖图 室内 场景 东方庭院茶室"
+  },
+  {
+    "id": "minmin-77f766bcf16f9065",
+    "name": "海岸白墙日光",
+    "src": "/backgrounds-optimized/minmin-77f766bcf16f9065.webp",
+    "category": "混合场景",
+    "origin": "minmin",
+    "keywords": "混合场景 口播背景 竖图 室内 场景 海岸白墙日光"
+  },
+  {
+    "id": "minmin-0b290517d317ddf3",
+    "name": "暖木窗边书房",
+    "src": "/backgrounds-optimized/minmin-0b290517d317ddf3.webp",
+    "category": "混合场景",
+    "origin": "minmin",
+    "keywords": "混合场景 口播背景 竖图 室内 场景 暖木窗边书房"
+  },
+  {
+    "id": "minmin-2ae9eefd578cdb30",
+    "name": "暖木窗边书房 · 初版",
+    "src": "/backgrounds-optimized/minmin-2ae9eefd578cdb30.webp",
+    "category": "混合场景",
+    "origin": "minmin",
+    "keywords": "混合场景 口播背景 竖图 室内 暖木窗边书房 初版"
+  },
+  {
+    "id": "minmin-733acf05ec343b82",
+    "name": "选景稿 · 雨天都市窗景",
+    "src": "/backgrounds-optimized/minmin-733acf05ec343b82.webp",
+    "category": "早期选景稿",
+    "origin": "minmin",
+    "keywords": "早期选景稿 口播背景 竖图 室内 场景 雨天都市窗景"
+  },
+  {
+    "id": "minmin-140da18c57e482ac",
+    "name": "选景稿 · 琥珀夜色会客厅",
+    "src": "/backgrounds-optimized/minmin-140da18c57e482ac.webp",
+    "category": "早期选景稿",
+    "origin": "minmin",
+    "keywords": "早期选景稿 口播背景 竖图 室内 场景 琥珀夜色会客厅"
+  },
+  {
+    "id": "minmin-1e4097351ab2f598",
+    "name": "选景稿 · 黄昏林荫露台",
+    "src": "/backgrounds-optimized/minmin-1e4097351ab2f598.webp",
+    "category": "早期选景稿",
+    "origin": "minmin",
+    "keywords": "早期选景稿 口播背景 竖图 室内 场景 黄昏林荫露台"
+  },
+  {
+    "id": "minmin-3ee773624f4825cd",
+    "name": "选景稿 · 钴蓝艺术工作室",
+    "src": "/backgrounds-optimized/minmin-3ee773624f4825cd.webp",
+    "category": "早期选景稿",
+    "origin": "minmin",
+    "keywords": "早期选景稿 口播背景 竖图 室内 场景 钴蓝艺术工作室"
+  },
+  {
+    "id": "minmin-f075129dbb4dee9c",
+    "name": "选景稿 · 东方庭院茶室",
+    "src": "/backgrounds-optimized/minmin-f075129dbb4dee9c.webp",
+    "category": "早期选景稿",
+    "origin": "minmin",
+    "keywords": "早期选景稿 口播背景 竖图 室内 场景 东方庭院茶室"
+  },
+  {
+    "id": "minmin-2c4adc685a366b6e",
+    "name": "选景稿 · 海岸白墙日光",
+    "src": "/backgrounds-optimized/minmin-2c4adc685a366b6e.webp",
+    "category": "早期选景稿",
+    "origin": "minmin",
+    "keywords": "早期选景稿 口播背景 竖图 室内 场景 海岸白墙日光"
+  },
+  {
     "id": "minmin-a60942aa4b484d9d",
     "name": "试衣沙龙",
     "src": "/backgrounds-optimized/minmin-a60942aa4b484d9d.webp",
