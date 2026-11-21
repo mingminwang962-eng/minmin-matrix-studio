@@ -82,3 +82,11 @@ body.minmin-matrix-page{--ink:#242622;--muted:#666962;--paper:#fafaf7;--panel:#f
 .minmin-matrix-page .preview-stage{background:#f3f3ed}
 .minmin-matrix-page .artboard{--ink:#253650;--muted:#65758e;--line:#dbe3f0;--orange:#315fbb;--orange-soft:#e8efff;--coral:#315fbb;--coral-soft:#e8efff;--surface:#fff;--surface-soft:#f3f6fc}
 @media(max-width:720px){.minmin-matrix-page .minmin-brand-header{width:calc(100% - 32px)}.minmin-matrix-page .topbar .status-pill{display:none}.minmin-matrix-page .app-shell{padding-top:10px}}
+
+/* Keep the editor's own sticky controls below the shared site navigation. */
+.minmin-matrix-page{--minmin-site-header-height:57px}
+.minmin-matrix-page .tool-nav{top:var(--minmin-site-header-height)}
+.minmin-matrix-page .control-section{scroll-margin-top:calc(var(--minmin-site-header-height) + 80px)}
+@media(min-width:1100px){.minmin-matrix-page .preview-panel{top:calc(var(--minmin-site-header-height) + 14px);max-height:calc(100dvh - var(--minmin-site-header-height) - 28px)}}
+@media(max-width:1000px){.minmin-matrix-page{--minmin-site-header-height:100px}}
+@media(max-width:640px){.minmin-matrix-page{--minmin-site-header-height:90px}}
