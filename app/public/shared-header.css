@@ -63,32 +63,31 @@ body.minmin-tool-page.readme-layout .actions{margin-top:16px}
 @media(max-width:800px){body.minmin-tool-page .hero{grid-template-columns:1fr;padding:34px 0;gap:28px}body.minmin-tool-page.readme-layout .hero{grid-template-columns:1fr;padding-top:28px}body.minmin-tool-page h1,body.minmin-tool-page.readme-layout h1{font-size:42px}body.minmin-tool-page .covers,body.minmin-tool-page .hero-art{max-width:540px}body.minmin-tool-page .how,body.minmin-tool-page .questions{padding-top:32px;padding-bottom:32px}body.minmin-tool-page.readme-layout .steps{grid-template-columns:1fr}body.minmin-tool-page .steps{gap:22px}body.minmin-tool-page .numbers{gap:20px}body.minmin-tool-page .tool-page-links{gap:16px;margin-top:14px}}
 @media(max-width:640px){body.minmin-tool-page main,body.minmin-tool-page footer{padding-left:20px;padding-right:20px}body.minmin-tool-page h1,body.minmin-tool-page.readme-layout h1{font-size:36px}body.minmin-tool-page h2{font-size:25px}body.minmin-tool-page .lead{font-size:17px}body.minmin-tool-page .install{padding:22px}body.minmin-tool-page .numbers strong{font-size:28px}body.minmin-tool-page .numbers{gap:12px}body.minmin-tool-page .tool-page-links{font-size:12px}body.minmin-tool-page.readme-layout .card-label{align-items:baseline;flex-wrap:wrap}}
 
-/* The editor keeps its full workspace and the exported card's own typography/colors. */
-html:has(body.minmin-matrix-page){background:#fafaf7}
-body.minmin-matrix-page{--ink:#242622;--muted:#666962;--paper:#fafaf7;--panel:#fffefb;--line:#deded3;--soft-line:#ecece4;--orange:#806100;--orange-soft:#fff3ad;--coral:#806100;--coral-soft:#fff3ad;--surface:#fffefb;--surface-soft:#f3f3ed;background:#fafaf7;background-image:none}
+/* Matrix keeps the original blue editor palette; only the site header is shared. */
 .minmin-matrix-page .minmin-brand-header{max-width:1392px;width:calc(100% - 48px)}
 .minmin-matrix-page .app-shell{padding-top:14px}
-.minmin-matrix-page .topbar{min-height:56px;padding:8px 16px;background:transparent;border:0;border-bottom:1px solid #deded3;border-radius:0;margin-bottom:14px;backdrop-filter:none}
-.minmin-matrix-page .topbar .eyebrow{font-size:10px;letter-spacing:1.4px;color:#806100}
+.minmin-matrix-page .topbar{min-height:56px;padding:8px 16px;background:transparent;border:0;border-bottom:1px solid var(--line);border-radius:0;margin-bottom:14px;backdrop-filter:none}
+.minmin-matrix-page .topbar .eyebrow{font-size:10px;letter-spacing:1.4px}
 .minmin-matrix-page .topbar h1{font-size:21px}
-.minmin-matrix-page .status-pill{color:#806100;background:#fff3ad;border-color:#e3d69e;font-size:12px;min-height:30px;border-radius:4px}
+.minmin-matrix-page .status-pill{font-size:12px;min-height:30px;border-radius:4px}
 .minmin-matrix-page .workspace{gap:20px}
-.minmin-matrix-page .control-panel,.minmin-matrix-page .preview-panel{background:#fffefb;border-color:#deded3;border-radius:6px;box-shadow:none}
-.minmin-matrix-page .tool-nav,.minmin-matrix-page .preview-toolbar{background:#fffefb;border-color:#deded3}
-.minmin-matrix-page .tool-nav button.active,.minmin-matrix-page .tool-nav button[aria-current]{color:#242622;background:#ffdf00}
-.minmin-matrix-page .control-panel input,.minmin-matrix-page .control-panel textarea{border-color:#deded3;background:#fffefb;color:#242622}
-.minmin-matrix-page .control-panel button.active,.minmin-matrix-page .control-panel button.selected{color:#242622;background:#ffdf00;border-color:#e4cc00;box-shadow:none}
-.minmin-matrix-page .download-button{background:#ffdf00;color:#242622;border-color:#ffdf00;box-shadow:none}
-.minmin-matrix-page .preview-stage{background:#f3f3ed}
-.minmin-matrix-page .artboard{--ink:#253650;--muted:#65758e;--line:#dbe3f0;--orange:#315fbb;--orange-soft:#e8efff;--coral:#315fbb;--coral-soft:#e8efff;--surface:#fff;--surface-soft:#f3f6fc}
-@media(max-width:720px){.minmin-matrix-page .minmin-brand-header{width:calc(100% - 32px)}.minmin-matrix-page .topbar .status-pill{display:none}.minmin-matrix-page .app-shell{padding-top:10px}}
-
-/* Keep the editor's own sticky controls below the shared site navigation. */
 .minmin-matrix-page{--minmin-site-header-height:57px}
 .minmin-matrix-page .tool-nav{top:var(--minmin-site-header-height)}
 .minmin-matrix-page .control-section{scroll-margin-top:calc(var(--minmin-site-header-height) + 80px)}
 @media(min-width:1100px){.minmin-matrix-page .preview-panel{top:calc(var(--minmin-site-header-height) + 14px);max-height:calc(100dvh - var(--minmin-site-header-height) - 28px)}}
 @media(max-width:1000px){.minmin-matrix-page{--minmin-site-header-height:100px}}
+@media(max-width:720px){.minmin-matrix-page .minmin-brand-header{width:calc(100% - 32px)}.minmin-matrix-page .topbar .status-pill{display:none}.minmin-matrix-page .app-shell{padding-top:10px}}
 @media(max-width:640px){.minmin-matrix-page{--minmin-site-header-height:90px}}
-
 .minmin-matrix-page .mc-trigger{bottom:88px}
+
+/* Matrix's shared header uses the same blue accent as its editor. */
+.minmin-matrix-page .minmin-brand-header{background:#f6f8fd}
+.minmin-matrix-page .minmin-header-main{border-color:#dbe3f0}
+.minmin-matrix-page .minmin-tool-nav a,.minmin-matrix-page .minmin-tool-nav a:visited{color:#65758e}
+.minmin-matrix-page .minmin-tool-nav a:hover{background:#e8efff;color:#253650}
+.minmin-matrix-page .minmin-tool-nav a[aria-current="page"],.minmin-matrix-page .minmin-tool-nav a[aria-current="page"]:visited{background:#315fbb;color:#fff}
+.minmin-matrix-page .minmin-brand-header .home-return,.minmin-matrix-page .minmin-brand-header .home-return:visited{color:#315fbb;border-color:#dbe3f0}
+.minmin-matrix-page .minmin-brand-header .home-return:hover{color:#264d98}
+.minmin-matrix-page .minmin-brand-header a:focus-visible{outline-color:#315fbb}
+.minmin-matrix-page .mc-trigger,.minmin-matrix-page .mc-copy{background:#315fbb;color:#fff;border-color:#315fbb}
+.minmin-matrix-page .mc-trigger:hover,.minmin-matrix-page .mc-copy:hover{background:#264d98}
