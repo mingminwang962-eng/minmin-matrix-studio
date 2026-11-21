@@ -90,3 +90,5 @@ body.minmin-matrix-page{--ink:#242622;--muted:#666962;--paper:#fafaf7;--panel:#f
 @media(min-width:1100px){.minmin-matrix-page .preview-panel{top:calc(var(--minmin-site-header-height) + 14px);max-height:calc(100dvh - var(--minmin-site-header-height) - 28px)}}
 @media(max-width:1000px){.minmin-matrix-page{--minmin-site-header-height:100px}}
 @media(max-width:640px){.minmin-matrix-page{--minmin-site-header-height:90px}}
+
+.minmin-matrix-page .mc-trigger{bottom:88px}
