@@ -1,0 +1,84 @@
+
+/* Wide content layout with the compact integrated navigation. */
+.minmin-brand-header{height:auto;min-height:0;display:block;position:sticky;top:0;z-index:100;width:calc(100% - 64px);max-width:1056px;margin:0 auto;padding:0 12px;background:#fafaf7;border:0}
+.minmin-header-main{display:grid;grid-template-columns:112px minmax(0,1fr) auto;align-items:center;gap:16px;border-bottom:1px solid #deded3}
+.minmin-brand-header .brand-home{display:block;min-width:0;text-decoration:none}
+.minmin-brand-header .brand-logo{border-radius:0;box-shadow:none;display:block;width:112px;height:56px;object-fit:contain}
+.minmin-brand-header .home-return,.minmin-brand-header .home-return:visited{display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:40px;padding:8px 0 8px 15px;border:0;border-left:1px solid #deded3;border-radius:0;background:transparent;color:#242622;font:500 13px/1.3 -apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif;text-decoration:none;white-space:nowrap;flex:none;transition:color .16s}
+.minmin-brand-header .home-return span{font-size:17px;line-height:1;color:inherit}
+.minmin-brand-header .home-return:hover{color:#987000}
+.minmin-brand-header a:focus-visible{outline:2px solid #987000;outline-offset:4px}
+
+.minmin-tool-nav{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif;display:flex;align-items:center;justify-content:center;gap:4px;min-width:0}
+.minmin-tool-nav a,.minmin-tool-nav a:visited{display:block;flex:none;padding:10px 8px;border-radius:7px;color:#666962;text-decoration:none;white-space:nowrap;font-size:13px;line-height:1.4}
+.minmin-tool-nav a:hover{background:#f0f1e9;color:#242622}
+.minmin-tool-nav a[aria-current="page"],.minmin-tool-nav a[aria-current="page"]:visited{background:#ffdf00;color:#242622;font-weight:650}
+
+@media(max-width:1000px){.minmin-header-main{grid-template-columns:1fr auto;gap:0 16px}.minmin-tool-nav{grid-row:2;grid-column:1/-1;justify-content:flex-start;overflow-x:auto;scrollbar-width:thin;padding-bottom:4px}.minmin-tool-nav a,.minmin-tool-nav a:visited{padding:10px 12px}.home-return{grid-row:1;grid-column:2}}
+@media(max-width:720px){.minmin-brand-header{width:calc(100% - 40px);padding:0 10px}}
+@media(max-width:640px){.minmin-brand-header .brand-logo{width:96px;height:48px}.minmin-brand-header .home-return{gap:7px;min-height:40px;padding:8px 0 8px 12px;font-size:12px}.minmin-tool-nav a,.minmin-tool-nav a:visited{padding:10px 12px;font-size:12px}}
+@media(prefers-reduced-motion:reduce){.minmin-brand-header .home-return{transition:none}}
+
+/* Shared product-page palette and spacing; original content and sample images stay intact. */
+html:has(body.minmin-tool-page){background:#fafaf7}
+body.minmin-tool-page{--accent:#987000!important;--bg:#fafaf7!important;--tint:#f3f3ed!important;--line:#deded3!important;--purple:#987000!important;background:#fafaf7;color:#242622;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.7}
+body.minmin-tool-page main,body.minmin-tool-page footer{max-width:1120px;padding-left:32px;padding-right:32px;margin-left:auto;margin-right:auto}
+body.minmin-tool-page .hero{padding:52px 0 44px;gap:48px;align-items:center}
+body.minmin-tool-page h1{font-size:clamp(40px,4.6vw,66px);line-height:1.18;letter-spacing:-.04em;margin:18px 0 24px;color:#242622;border:0;padding:0}
+body.minmin-tool-page h2{font-size:28px;line-height:1.4;letter-spacing:-.025em;color:#242622}
+body.minmin-tool-page h3{color:#242622}
+body.minmin-tool-page p,body.minmin-tool-page figcaption{color:#666962}
+body.minmin-tool-page .how,body.minmin-tool-page .manual-callout,body.minmin-tool-page .agent-details,body.minmin-tool-page footer{border-color:#deded3}
+body.minmin-tool-page .eyebrow,body.minmin-tool-page .number,body.minmin-tool-page .step{color:#806100}
+body.minmin-tool-page .lead{color:#666962;font-size:18px;line-height:1.85}
+body.minmin-tool-page .primary{background:#ffdf00;border:1px solid #ffdf00;color:#242622;box-shadow:none;border-radius:0;padding:13px 20px;font-size:15px;font-weight:650;line-height:1.5}
+body.minmin-tool-page .primary:hover{background:#f3d100;border-color:#f3d100;filter:none}
+body.minmin-tool-page .secondary{background:transparent;color:#242622;border:0;border-bottom:1px solid #987000;border-radius:0;box-shadow:none;padding:8px 0;font-size:14px}
+body.minmin-tool-page .hint,body.minmin-tool-page .availability,body.minmin-tool-page .muted,body.minmin-tool-page .card-foot,body.minmin-tool-page #copy-status{color:#666962}
+body.minmin-tool-page .install{background:#f3f3ed;border:1px solid #deded3;border-radius:4px;padding:30px}
+body.minmin-tool-page textarea{background:#fafaf7;border-color:#deded3;color:#242622;border-radius:4px}
+body.minmin-tool-page .install textarea{background:#fffefb}
+body.minmin-tool-page .covers img,body.minmin-tool-page .hero-art img{border-radius:6px;box-shadow:none}
+body.minmin-tool-page .covers figure:nth-child(2){padding-top:24px}
+body.minmin-tool-page .hero-art{gap:16px}
+body.minmin-tool-page .how,body.minmin-tool-page .questions{padding-top:44px;padding-bottom:44px}
+body.minmin-tool-page .steps{gap:30px}
+body.minmin-tool-page .numbers{padding:24px 0;gap:55px;border-color:#deded3}
+body.minmin-tool-page .manual-callout{background:transparent;border-color:#deded3}
+body.minmin-tool-page .tool-page-links{display:flex;justify-content:flex-end;flex-wrap:wrap;gap:20px;margin-top:16px;font-size:13px}
+body.minmin-tool-page .tool-page-links a{color:#666962;text-decoration:none;border-bottom:1px solid #deded3}
+body.minmin-tool-page a:focus-visible,body.minmin-tool-page button:focus-visible,body.minmin-tool-page textarea:focus-visible{outline:2px solid #987000;outline-offset:4px}
+body.minmin-tool-page.readme-layout .hero{display:grid;grid-template-columns:1.05fr 1fr;padding-top:44px}
+body.minmin-tool-page.readme-layout h1{font-size:48px;max-width:9em}
+body.minmin-tool-page.readme-layout .prompt-card{margin:0;background:transparent;border:0;box-shadow:none}
+body.minmin-tool-page.readme-layout .prompt-card textarea{font-size:13px;min-height:170px;border-color:#deded3;background:#f3f3ed}
+body.minmin-tool-page.readme-layout .version{color:#806100;background:#fff3ad;border-color:#e3d69e}
+body.minmin-tool-page.readme-layout .steps{display:grid;grid-template-columns:repeat(3,1fr)}
+body.minmin-tool-page.readme-layout .steps article{padding:0;margin:0}
+body.minmin-tool-page.readme-layout .number{position:static;display:block;margin-bottom:10px}
+body.minmin-tool-page.readme-layout .how{padding-top:32px;padding-bottom:36px}
+body.minmin-tool-page.readme-layout .card-label{gap:12px;font-size:14px;line-height:1.6}
+body.minmin-tool-page.readme-layout .card-label span{font-size:11px}
+body.minmin-tool-page.readme-layout .actions{margin-top:16px}
+@media(max-width:800px){body.minmin-tool-page .hero{grid-template-columns:1fr;padding:34px 0;gap:28px}body.minmin-tool-page.readme-layout .hero{grid-template-columns:1fr;padding-top:28px}body.minmin-tool-page h1,body.minmin-tool-page.readme-layout h1{font-size:42px}body.minmin-tool-page .covers,body.minmin-tool-page .hero-art{max-width:540px}body.minmin-tool-page .how,body.minmin-tool-page .questions{padding-top:32px;padding-bottom:32px}body.minmin-tool-page.readme-layout .steps{grid-template-columns:1fr}body.minmin-tool-page .steps{gap:22px}body.minmin-tool-page .numbers{gap:20px}body.minmin-tool-page .tool-page-links{gap:16px;margin-top:14px}}
+@media(max-width:640px){body.minmin-tool-page main,body.minmin-tool-page footer{padding-left:20px;padding-right:20px}body.minmin-tool-page h1,body.minmin-tool-page.readme-layout h1{font-size:36px}body.minmin-tool-page h2{font-size:25px}body.minmin-tool-page .lead{font-size:17px}body.minmin-tool-page .install{padding:22px}body.minmin-tool-page .numbers strong{font-size:28px}body.minmin-tool-page .numbers{gap:12px}body.minmin-tool-page .tool-page-links{font-size:12px}body.minmin-tool-page.readme-layout .card-label{align-items:baseline;flex-wrap:wrap}}
+
+/* The editor keeps its full workspace and the exported card's own typography/colors. */
+html:has(body.minmin-matrix-page){background:#fafaf7}
+body.minmin-matrix-page{--ink:#242622;--muted:#666962;--paper:#fafaf7;--panel:#fffefb;--line:#deded3;--soft-line:#ecece4;--orange:#806100;--orange-soft:#fff3ad;--coral:#806100;--coral-soft:#fff3ad;--surface:#fffefb;--surface-soft:#f3f3ed;background:#fafaf7;background-image:none}
+.minmin-matrix-page .minmin-brand-header{max-width:1392px;width:calc(100% - 48px)}
+.minmin-matrix-page .app-shell{padding-top:14px}
+.minmin-matrix-page .topbar{min-height:56px;padding:8px 16px;background:transparent;border:0;border-bottom:1px solid #deded3;border-radius:0;margin-bottom:14px;backdrop-filter:none}
+.minmin-matrix-page .topbar .eyebrow{font-size:10px;letter-spacing:1.4px;color:#806100}
+.minmin-matrix-page .topbar h1{font-size:21px}
+.minmin-matrix-page .status-pill{color:#806100;background:#fff3ad;border-color:#e3d69e;font-size:12px;min-height:30px;border-radius:4px}
+.minmin-matrix-page .workspace{gap:20px}
+.minmin-matrix-page .control-panel,.minmin-matrix-page .preview-panel{background:#fffefb;border-color:#deded3;border-radius:6px;box-shadow:none}
+.minmin-matrix-page .tool-nav,.minmin-matrix-page .preview-toolbar{background:#fffefb;border-color:#deded3}
+.minmin-matrix-page .tool-nav button.active,.minmin-matrix-page .tool-nav button[aria-current]{color:#242622;background:#ffdf00}
+.minmin-matrix-page .control-panel input,.minmin-matrix-page .control-panel textarea{border-color:#deded3;background:#fffefb;color:#242622}
+.minmin-matrix-page .control-panel button.active,.minmin-matrix-page .control-panel button.selected{color:#242622;background:#ffdf00;border-color:#e4cc00;box-shadow:none}
+.minmin-matrix-page .download-button{background:#ffdf00;color:#242622;border-color:#ffdf00;box-shadow:none}
+.minmin-matrix-page .preview-stage{background:#f3f3ed}
+.minmin-matrix-page .artboard{--ink:#253650;--muted:#65758e;--line:#dbe3f0;--orange:#315fbb;--orange-soft:#e8efff;--coral:#315fbb;--coral-soft:#e8efff;--surface:#fff;--surface-soft:#f3f6fc}
+@media(max-width:720px){.minmin-matrix-page .minmin-brand-header{width:calc(100% - 32px)}.minmin-matrix-page .topbar .status-pill{display:none}.minmin-matrix-page .app-shell{padding-top:10px}}
